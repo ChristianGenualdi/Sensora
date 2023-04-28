@@ -1,11 +1,11 @@
 
 int SENSOR_TIME = 30000; //milliseconds
 
-#include "_board.h"
-#include "_ESP32.h"
-#include "_wifi.h"
+#include "board.h"
+#include "ESP32.h"
+#include "wifi.h"
 #include "Sensora_.h"
-#include "_mqtt.h"
+#include "MQTT.h"
 
 int oldButtonState = 1; //high by default
 
