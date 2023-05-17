@@ -19,8 +19,8 @@ void loop_app(){
     Serial.print("Relative Humidity : ");
     Serial.println(sht30.humidity);
     Serial.print("Battery : ");
-    Serial.println(analogRead(3) * 2.3 / 1024.0);
-    Serial.println();
+    batteryVoltage = analogReadMilliVolts(BATTERY_PIN) * 1.6 / 1000.0;
+    Serial.println(batteryVoltage);
   }
   else
   {
