@@ -37,7 +37,7 @@ void sendSensorData() {
 
 void sendEventData(int b) {
   DynamicJsonDocument jmsg(1024);
-  jmsg["Vbattery"] = analogRead(3) * 2.3 / 1024.0;//valori inviati il Json su mqtt
+  jmsg["Vbattery"] = analogReadMilliVolts(BATTERY_PIN) * 1.6 / 1000.0;
   jmsg["name"] = myName;
   jmsg["eventCount"] = eventCount;
   String mqttPayload = String(b);
