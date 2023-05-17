@@ -1,5 +1,7 @@
 #include <WEMOS_SHT3X.h>
 #define BUZZER 7
+#define BATTERY_PIN 3
+float batteryVoltage;
 SHT3X sht30(0x45);
 
 int frequency = 1000;
@@ -7,6 +9,7 @@ int duration = 500;
 int alertTemperature = 30;
 
 void setup_app() {
+     analogSetPinAttenuation(BATTERY_PIN, ADC_11db);
 }
 
 void loop_app(){
